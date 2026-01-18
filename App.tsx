@@ -18,25 +18,29 @@ const App: React.FC = () => {
   const mainRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Reveal animations for all sections
-    const sections = gsap.utils.toArray('.reveal-section');
-    sections.forEach((section: any) => {
-      gsap.fromTo(
-        section,
-        { opacity: 0, y: 50 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-          scrollTrigger: {
-            trigger: section,
-            start: 'top 80%',
-            end: 'top 20%',
-            toggleActions: 'play none none reverse',
-          },
-        }
-      );
-    });
+    try {
+      // Reveal animations for all sections
+      const sections = gsap.utils.toArray('.reveal-section');
+      sections.forEach((section: any) => {
+        gsap.fromTo(
+          section,
+          { opacity: 0, y: 50 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            scrollTrigger: {
+              trigger: section,
+              start: 'top 80%',
+              end: 'top 20%',
+              toggleActions: 'play none none reverse',
+            },
+          }
+        );
+      });
+    } catch (error) {
+      console.error('GSAP/ScrollTrigger Initialization Error:', error);
+    }
   }, []);
 
   return (
