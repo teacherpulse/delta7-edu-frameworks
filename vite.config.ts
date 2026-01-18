@@ -18,7 +18,7 @@ export default defineConfig(({ mode }) => {
         alias: {
           '@': path.resolve(__dirname, './'),
         },
-        extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json']
+        extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.vue']
       },
       build: {
         rollupOptions: {
