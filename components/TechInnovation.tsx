@@ -5,8 +5,8 @@ import { Cpu, MessageSquare, Code2, Globe } from 'lucide-react';
 const TechInnovation: React.FC = () => {
   const tools = [
     {
-      name: 'Gemini AI Pro',
-      desc: 'Powering automated rubric analysis and student behavioral predictions.',
+      name: 'System Intelligence',
+      desc: 'Architecting automated rubric analysis and student behavioral mapping.',
       icon: <Cpu className="w-10 h-10" />,
       tag: 'Reasoning Engine'
     },

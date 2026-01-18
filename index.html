@@ -90,14 +90,6 @@
   </style>
 </head>
 <body class="overflow-x-hidden selection:bg-teal-500/30">
-  <div id="protocol-check" style="display:none; background: #991b1b; color: white; padding: 20px; text-align: center; font-family: sans-serif; position: fixed; top: 0; left: 0; width: 100%; z-index: 9999;">
-    <strong>CRITICAL ERROR:</strong> You are opening this file directly. This application requires a web server to run. Please run <code>npm install</code> and <code>npm run dev</code> in your terminal as per the instructions.
-  </div>
-  <script>
-    if (window.location.protocol === 'file:') {
-      document.getElementById('protocol-check').style.display = 'block';
-    }
-  </script>
   <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>
